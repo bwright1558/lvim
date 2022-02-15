@@ -15,6 +15,12 @@ lvim.keys.normal_mode["<C-j>"] = "<cmd>lua require('utils').win_move('j')<cr>"
 lvim.keys.normal_mode["<C-k>"] = "<cmd>lua require('utils').win_move('k')<cr>"
 lvim.keys.normal_mode["<C-l>"] = "<cmd>lua require('utils').win_move('l')<cr>"
 
+-- Special mapping to adjust indentation when moving blocks of code up and down lines.
+-- This is buggy without treesitter indent enabled. But at the same time, python
+-- indents are a bit wonky when treesitter indent is enabled.
+lvim.keys.visual_block_mode["J"] = ":move '>+1<cr>gv=gv"
+lvim.keys.visual_block_mode["K"] = ":move '<-2<cr>gv=gv"
+
 -- Trim trailing whitespace and newlines at EOF on save.
 vim.cmd([[command! Format exe 'lua vim.lsp.buf.formatting()']])
 vim.cmd([[command! -nargs=0 TrimWhitespace :%s/\s\+$//e]])
@@ -71,7 +77,7 @@ lvim.builtin.lualine.options.disabled_filetypes = { "dashboard", "NvimTree", "Ou
 lvim.builtin.treesitter.ensure_installed = "maintained"
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
-lvim.builtin.treesitter.indent.enable = false
+-- lvim.builtin.treesitter.indent.enable = false
 
 -- LSP
 lvim.lsp.diagnostics.virtual_text = false
