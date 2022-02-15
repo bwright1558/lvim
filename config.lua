@@ -88,4 +88,5 @@ lvim.lsp.diagnostics.virtual_text = false
 lvim.plugins = {
   {"EdenEast/nightfox.nvim"},
   {"tpope/vim-fugitive"},
+  {"ggandor/lightspeed.nvim"},
 }
