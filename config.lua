@@ -3,7 +3,7 @@ lvim.log.level = "warn"
 lvim.format_on_save = false
 lvim.colorscheme = "nightfox"
 vim.opt.cmdheight = 1
-vim.opt.showtabline = 0
+vim.opt.showtabline = 1
 vim.opt.timeoutlen = 500
 vim.opt.modeline = false
 vim.opt.relativenumber = true
@@ -57,7 +57,7 @@ lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<cr>", "Project
 lvim.builtin.dashboard.active = true
 lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
-lvim.builtin.bufferline.active = false
+lvim.builtin.bufferline.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 1
 
