@@ -10,6 +10,9 @@ vim.opt.relativenumber = true
 
 -- Keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
+lvim.keys.insert_mode["jk"] = false
+lvim.keys.insert_mode["kj"] = false
+lvim.keys.insert_mode["jj"] = false
 lvim.keys.normal_mode["<C-h>"] = "<cmd>lua require('utils').win_move('h')<cr>"
 lvim.keys.normal_mode["<C-j>"] = "<cmd>lua require('utils').win_move('j')<cr>"
 lvim.keys.normal_mode["<C-k>"] = "<cmd>lua require('utils').win_move('k')<cr>"
