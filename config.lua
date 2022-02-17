@@ -89,4 +89,5 @@ lvim.plugins = {
   {"EdenEast/nightfox.nvim"},
   {"tpope/vim-fugitive"},
   {"ggandor/lightspeed.nvim"},
+  {"fatih/vim-go"},
 }
