@@ -92,5 +92,10 @@ lvim.plugins = {
   {"EdenEast/nightfox.nvim"},
   {"tpope/vim-fugitive"},
   {"ggandor/lightspeed.nvim"},
-  {"fatih/vim-go"},
+  {
+    "fatih/vim-go",
+    setup = function()
+      vim.g.go_def_mapping_enabled = false
+    end,
+  },
 }
