@@ -7,6 +7,7 @@ vim.opt.showtabline = 0
 vim.opt.timeoutlen = 500
 vim.opt.modeline = false
 vim.opt.relativenumber = true
+vim.opt.whichwrap:remove({ "<", ">", "[", "]", "h", "l" })
 
 -- Keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
