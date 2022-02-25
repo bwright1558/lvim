@@ -18,6 +18,7 @@ lvim.keys.normal_mode["<C-j>"] = "<cmd>lua require('utils').win_move('j')<cr>"
 lvim.keys.normal_mode["<C-k>"] = "<cmd>lua require('utils').win_move('k')<cr>"
 lvim.keys.normal_mode["<C-l>"] = "<cmd>lua require('utils').win_move('l')<cr>"
 lvim.keys.term_mode["<C-k>"] = [[<C-\><C-n>]] -- experimental
+lvim.builtin.which_key.mappings["G"] = { "<cmd>Git<cr>", "Git Summary" }
 
 -- Special mapping to adjust indentation when moving blocks of code up and down lines.
 -- This is buggy without treesitter indent enabled. But at the same time, python
