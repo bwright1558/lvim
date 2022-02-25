@@ -94,8 +94,13 @@ lvim.plugins = {
   {"ggandor/lightspeed.nvim"},
   {
     "fatih/vim-go",
+    ft = "go",
     setup = function()
       vim.g.go_def_mapping_enabled = false
     end,
+  },
+  {
+    "Vimjas/vim-python-pep8-indent",
+    ft = "python",
   },
 }
