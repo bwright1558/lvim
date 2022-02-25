@@ -81,7 +81,8 @@ lvim.builtin.lualine.options.disabled_filetypes = { "dashboard", "NvimTree", "Ou
 lvim.builtin.treesitter.ensure_installed = "maintained"
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
-lvim.builtin.treesitter.indent.enable = false
+lvim.builtin.treesitter.indent.enable = true
+lvim.builtin.treesitter.indent.disable = { "yaml", "python" }
 
 -- LSP
 lvim.lsp.diagnostics.virtual_text = false
