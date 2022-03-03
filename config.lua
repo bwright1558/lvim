@@ -95,6 +95,13 @@ lvim.plugins = {
   {"tpope/vim-fugitive"},
   {"ggandor/lightspeed.nvim"},
   {
+    "ray-x/lsp_signature.nvim",
+    event = "BufRead",
+    config = function()
+      require("lsp_signature").on_attach()
+    end,
+  },
+  {
     "fatih/vim-go",
     ft = "go",
     setup = function()
