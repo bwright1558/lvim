@@ -22,10 +22,8 @@ lvim.keys.term_mode["<C-k>"] = [[<C-\><C-n>]] -- experimental
 lvim.builtin.which_key.mappings["G"] = { "<cmd>Git<cr>", "Git Summary" }
 
 -- Special mapping to adjust indentation when moving blocks of code up and down lines.
--- This is buggy without treesitter indent enabled. But at the same time, python
--- indents are a bit wonky when treesitter indent is enabled.
--- lvim.keys.visual_block_mode["J"] = ":move '>+1<cr>gv=gv"
--- lvim.keys.visual_block_mode["K"] = ":move '<-2<cr>gv=gv"
+lvim.keys.visual_block_mode["J"] = ":move '>+1<cr>gv=gv"
+lvim.keys.visual_block_mode["K"] = ":move '<-2<cr>gv=gv"
 
 -- Trim trailing whitespace and newlines at EOF on save.
 vim.cmd([[command! Format exe 'lua vim.lsp.buf.formatting()']])
