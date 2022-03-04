@@ -4,7 +4,7 @@ lvim.format_on_save = false
 lvim.colorscheme = "nightfox"
 vim.opt.cmdheight = 1
 vim.opt.showtabline = 0
-vim.opt.timeoutlen = 500
+-- vim.opt.timeoutlen = 500
 vim.opt.modeline = false
 vim.opt.relativenumber = true
 vim.opt.whichwrap:remove({ "<", ">", "[", "]", "h", "l" })
@@ -61,6 +61,15 @@ lvim.builtin.telescope.defaults.mappings = {
 
 -- Which Key Mappings
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<cr>", "Projects" }
+lvim.builtin.which_key.mappings["t"] = {
+  name = "Diagnostics",
+  t = { "<cmd>TroubleToggle<cr>", "Trouble" },
+  w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "Workspace" },
+  d = { "<cmd>TroubleToggle document_diagnostics<cr>", "Document" },
+  q = { "<cmd>TroubleToggle quickfix<cr>", "Quickfix" },
+  l = { "<cmd>TroubleToggle loclist<cr>", "Loclist" },
+  r = { "<cmd>TroubleToggle lsp_references<cr>", "References" },
+}
 
 -- User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
@@ -98,6 +107,10 @@ lvim.plugins = {
     config = function()
       require("lsp_signature").on_attach()
     end,
+  },
+  {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
   },
   {
     "fatih/vim-go",
