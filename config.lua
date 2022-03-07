@@ -100,8 +100,11 @@ vim.list_extend(lvim.lsp.override, { "yamlls" })
 -- Additional Plugins
 lvim.plugins = {
   {"EdenEast/nightfox.nvim"},
-  {"tpope/vim-fugitive"},
-  {"ggandor/lightspeed.nvim"},
+  {
+    "tpope/vim-fugitive",
+    cmd = { "G", "Git" },
+    ft = "fugitive",
+  },
   {
     "ray-x/lsp_signature.nvim",
     event = "BufRead",
