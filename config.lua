@@ -73,7 +73,8 @@ lvim.builtin.which_key.mappings["t"] = {
 
 -- User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
-lvim.builtin.dashboard.active = true
+lvim.builtin.alpha.active = true
+lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.bufferline.active = false
@@ -84,7 +85,7 @@ lvim.builtin.nvimtree.show_icons.git = 1
 lvim.builtin.lualine.style = "default"
 lvim.builtin.lualine.options.component_separators = { left = "", right = "" }
 lvim.builtin.lualine.options.section_separators = { left = "", right = "" }
-lvim.builtin.lualine.options.disabled_filetypes = { "dashboard", "NvimTree", "Outline" }
+lvim.builtin.lualine.options.disabled_filetypes = { "alpha", "NvimTree", "Outline" }
 
 -- Treesitter
 lvim.builtin.treesitter.ensure_installed = "maintained"
@@ -122,7 +123,7 @@ lvim.plugins = {
     setup = function()
       -- vim.g.indent_blankline_show_first_indent_level = false
       vim.g.indent_blankline_show_trailing_blankline_indent = false
-      vim.g.indent_blankline_filetype_exclude = { "help", "terminal", "dashboard" }
+      vim.g.indent_blankline_filetype_exclude = { "help", "terminal", "alpha" }
       vim.g.indent_blankline_buftype_exclude = { "terminal", "nofile", "nowrite" }
     end,
   },
