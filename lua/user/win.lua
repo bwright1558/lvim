@@ -1,6 +1,6 @@
 local M = {}
 
--- win_move splits the window in the direction of the specified movement key.
+-- move splits the window in the direction of the specified movement key.
 -- If a split already exists in that direction, then cursor focus is moved
 -- to the window in the direction of the specified movement key.
 -- @param key The movement key. Can be one of "h", "j", "k", or "l".
