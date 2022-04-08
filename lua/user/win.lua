@@ -4,7 +4,7 @@ local M = {}
 -- If a split already exists in that direction, then cursor focus is moved
 -- to the window in the direction of the specified movement key.
 -- @param key The movement key. Can be one of "h", "j", "k", or "l".
-function M.win_move(key)
+function M.move(key)
   local curwin = vim.api.nvim_win_get_number(0)
   vim.cmd("wincmd " .. key)
 

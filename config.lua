@@ -16,10 +16,10 @@ lvim.keys.insert_mode["kj"] = false
 lvim.keys.insert_mode["jj"] = false
 lvim.keys.normal_mode["<S-l>"] = false
 lvim.keys.normal_mode["<S-h>"] = false
-lvim.keys.normal_mode["<C-h>"] = "<cmd>lua require('utils').win_move('h')<cr>"
-lvim.keys.normal_mode["<C-j>"] = "<cmd>lua require('utils').win_move('j')<cr>"
-lvim.keys.normal_mode["<C-k>"] = "<cmd>lua require('utils').win_move('k')<cr>"
-lvim.keys.normal_mode["<C-l>"] = "<cmd>lua require('utils').win_move('l')<cr>"
+lvim.keys.normal_mode["<C-h>"] = "<cmd>lua require('user.win').move('h')<cr>"
+lvim.keys.normal_mode["<C-j>"] = "<cmd>lua require('user.win').move('j')<cr>"
+lvim.keys.normal_mode["<C-k>"] = "<cmd>lua require('user.win').move('k')<cr>"
+lvim.keys.normal_mode["<C-l>"] = "<cmd>lua require('user.win').move('l')<cr>"
 lvim.keys.term_mode["<C-k>"] = [[<C-\><C-n>]] -- experimental
 lvim.builtin.which_key.mappings["G"] = { "<cmd>Git<cr>", "Git Summary" }
 
