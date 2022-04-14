@@ -2,10 +2,6 @@
 lvim.plugins = {
   {"EdenEast/nightfox.nvim"},
   {
-    "ggandor/lightspeed.nvim",
-    event = "BufRead",
-  },
-  {
     "tpope/vim-fugitive",
     cmd = { "G", "Git" },
     ft = "fugitive",
