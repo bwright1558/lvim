@@ -1,1 +1,3 @@
-vim.cmd("setlocal ts=4 sw=4 noet")
+vim.opt_local.tabstop = 4
+vim.opt_local.shiftwidth = 4
+vim.opt_local.expandtab = false

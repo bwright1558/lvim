@@ -1,1 +1,1 @@
-vim.cmd("set nowrap")
+vim.opt.wrap = false
