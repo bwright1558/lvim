@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd({"BufWritePre"}, {
 })
 
 -- Formatting
-vim.api.nvim_create_user_command("Format", vim.lsp.buf.formatting, {})
+vim.api.nvim_create_user_command("Format", vim.lsp.buf.formatting_seq_sync, {})
 
 -- Change filetype for certain types of files with alternate file extension.
 vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
