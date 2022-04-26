@@ -1,6 +1,6 @@
 -- Additional Plugins
 lvim.plugins = {
-  {"EdenEast/nightfox.nvim"},
+  { "EdenEast/nightfox.nvim" },
   {
     "tpope/vim-fugitive",
     cmd = { "G", "Git" },
