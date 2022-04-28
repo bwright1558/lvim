@@ -1,5 +1,8 @@
 -- Which Key Mappings
-lvim.builtin.which_key.mappings["G"] = { "<cmd>Git<cr>", "Git Summary" }
+lvim.builtin.which_key.mappings[";"] = { "<cmd>Telescope filetypes<cr>", "Filetypes" }
+lvim.builtin.which_key.mappings["g"]["g"] = { "<cmd>G<cr>", "Summary" }
+lvim.builtin.which_key.mappings["g"]["d"] = { "<cmd>DiffviewOpen<cr>", "Git Diff" }
+lvim.builtin.which_key.mappings["g"]["h"] = { "<cmd>DiffviewFileHistory<cr>", "File History" }
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<cr>", "Projects" }
 lvim.builtin.which_key.mappings["t"] = {
   name = "Diagnostics",
