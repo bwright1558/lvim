@@ -1,6 +1,7 @@
 -- Additional Plugins
 lvim.plugins = {
   { "EdenEast/nightfox.nvim" },
+  { "sindrets/diffview.nvim" },
   {
     "tpope/vim-fugitive",
     cmd = { "G", "Git" },
