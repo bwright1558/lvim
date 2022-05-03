@@ -1,7 +1,8 @@
 -- General
 lvim.log.level = "warn"
-lvim.format_on_save = true
 lvim.colorscheme = "nightfox"
+lvim.format_on_save.pattern = "*"
+
 vim.opt.cmdheight = 1
 vim.opt.showtabline = 0
 -- vim.opt.timeoutlen = 500
