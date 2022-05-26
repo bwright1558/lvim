@@ -1,6 +1,10 @@
 -- Trim trailing whitespace and newlines at EOF on save.
 vim.api.nvim_create_user_command("TrimWhitespace", "%s/\\s\\+$//e", {})
 vim.api.nvim_create_user_command("TrimNewlines", "%s/\\($\\n\\s*\\)\\+\\%$//e", {})
+
+-- Formatting
+vim.api.nvim_create_user_command("Format", vim.lsp.buf.formatting_seq_sync, {})
+
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*" },
   callback = function()
@@ -8,9 +12,6 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     vim.api.nvim_exec("TrimNewlines", false)
   end,
 })
-
--- Formatting
-vim.api.nvim_create_user_command("Format", vim.lsp.buf.formatting_seq_sync, {})
 
 -- Change filetype for certain types of files with alternate file extension.
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
@@ -35,5 +36,16 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*.go" },
   callback = function()
     require("go.format").goimport()
+  end,
+})
+
+-- Format specific file types on save.
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  pattern = {
+    "*.json",
+    "*.lua",
+  },
+  callback = function()
+    vim.api.nvim_exec("Format", false)
   end,
 })
