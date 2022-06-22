@@ -1,10 +1,7 @@
 -- General
 lvim.log.level = "warn"
 lvim.colorscheme = "nightfox"
-
--- This feature doesn't seem to work as expected. It appears to delete code
--- that shouldn't be deleted (like function argument names) under certain conditions.
-lvim.format_on_save = false
+lvim.format_on_save.pattern = { "*.json", "*.lua", "*.go" }
 
 vim.opt.cmdheight = 1
 vim.opt.showtabline = 0

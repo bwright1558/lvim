@@ -30,22 +30,3 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = { "haproxy.cfg.j2" },
   callback = function() vim.opt.filetype = "haproxy" end,
 })
-
--- Run gofmt + goimport on save.
-vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-  pattern = { "*.go" },
-  callback = function()
-    require("go.format").goimport()
-  end,
-})
-
--- Format specific file types on save.
-vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-  pattern = {
-    "*.json",
-    "*.lua",
-  },
-  callback = function()
-    vim.api.nvim_exec("Format", false)
-  end,
-})
