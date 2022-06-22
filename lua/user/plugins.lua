@@ -40,7 +40,7 @@ lvim.plugins = {
   {
     "ray-x/go.nvim",
     ft = "go",
-    setup = function()
+    config = function()
       require("go").setup()
     end,
   },
