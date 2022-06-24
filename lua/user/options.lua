@@ -1,7 +1,7 @@
 -- General
 lvim.log.level = "warn"
 lvim.colorscheme = "nightfox"
-lvim.format_on_save.pattern = { "*.json", "*.lua", "*.go" }
+lvim.format_on_save.pattern = { "*.json", "*.lua" }
 
 vim.opt.cmdheight = 1
 vim.opt.showtabline = 0
