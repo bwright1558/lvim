@@ -147,6 +147,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
 lvim.plugins = {
   { "EdenEast/nightfox.nvim" },
   { "sindrets/diffview.nvim" },
+  { "ggandor/lightspeed.nvim" },
   {
     "tpope/vim-fugitive",
     cmd = { "G", "Git" },
