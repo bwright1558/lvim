@@ -17,10 +17,10 @@ lvim.keys.insert_mode["jj"] = false
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<S-l>"] = false
 lvim.keys.normal_mode["<S-h>"] = false
-lvim.keys.normal_mode["<C-h>"] = "<cmd>lua require('user.win').move('h')<cr>"
-lvim.keys.normal_mode["<C-j>"] = "<cmd>lua require('user.win').move('j')<cr>"
-lvim.keys.normal_mode["<C-k>"] = "<cmd>lua require('user.win').move('k')<cr>"
-lvim.keys.normal_mode["<C-l>"] = "<cmd>lua require('user.win').move('l')<cr>"
+lvim.keys.normal_mode["<C-h>"] = "<cmd>FocusSplitLeft<cr>"
+lvim.keys.normal_mode["<C-j>"] = "<cmd>FocusSplitDown<cr>"
+lvim.keys.normal_mode["<C-k>"] = "<cmd>FocusSplitUp<cr>"
+lvim.keys.normal_mode["<C-l>"] = "<cmd>FocusSplitRight<cr>"
 lvim.keys.term_mode["<C-k>"] = [[<C-\><C-n>]] -- experimental
 
 -- Special mapping to adjust indentation when moving blocks of code up and down lines.
@@ -183,5 +183,13 @@ lvim.plugins = {
   {
     "Vimjas/vim-python-pep8-indent",
     ft = "python",
+  },
+  {
+    "beauwilliams/focus.nvim",
+    config = function()
+      require("focus").setup({
+        relativenumber = true,
+      })
+    end,
   },
 }
