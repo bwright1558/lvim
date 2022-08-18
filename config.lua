@@ -9,6 +9,12 @@ vim.opt.modeline = false
 vim.opt.relativenumber = true
 vim.opt.whichwrap:remove({ "<", ">", "[", "]", "h", "l" })
 
+-- folding
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldenable = true
+vim.opt.foldlevel = 99
+
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 lvim.keys.insert_mode["jk"] = false
@@ -30,7 +36,8 @@ lvim.keys.visual_block_mode["K"] = ":move '<-2<cr>gv=gv"
 -- Which Key mappings
 lvim.builtin.which_key.mappings[";"] = { "<cmd>Telescope filetypes<cr>", "Filetypes" }
 lvim.builtin.which_key.mappings["G"] = { ":G ", "Git Command", silent = false }
-lvim.builtin.which_key.mappings["g"]["g"] = { "<cmd>G <bar> only<cr>", "Summary" }
+-- lvim.builtin.which_key.mappings["g"]["g"] = { "<cmd>G <bar> only<cr>", "Summary" }
+lvim.builtin.which_key.mappings["g"]["g"] = { "<cmd>G<cr>", "Git Status" }
 lvim.builtin.which_key.mappings["g"]["d"] = { "<cmd>DiffviewOpen<cr>", "Git Diff" }
 lvim.builtin.which_key.mappings["g"]["h"] = { "<cmd>DiffviewFileHistory<cr>", "File History" }
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<cr>", "Projects" }
@@ -69,7 +76,7 @@ lvim.builtin.alpha.active = false
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
-lvim.builtin.bufferline.active = false
+lvim.builtin.bufferline.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
 lvim.builtin.project.manual_mode = true
@@ -174,6 +181,32 @@ lvim.plugins = {
     end,
   },
   {
+    "beauwilliams/focus.nvim",
+    config = function()
+      require("focus").setup({
+        -- autoresize = false,
+        signcolumn = false,
+      })
+    end,
+  },
+  {
+    "anuvyklack/pretty-fold.nvim",
+    config = function()
+      require("pretty-fold").setup({
+        keep_indentation = false,
+        fill_char = "━",
+        sections = {
+          left = {
+            "━ ", function() return string.rep("•", vim.v.foldlevel) end, " ━┫", "content", "┣",
+          },
+          right = {
+            "┫ ", "number_of_folded_lines", ": ", "percentage", " ┣━━",
+          },
+        },
+      })
+    end,
+  },
+  {
     "ray-x/go.nvim",
     ft = "go",
     config = function()
@@ -183,13 +216,5 @@ lvim.plugins = {
   {
     "Vimjas/vim-python-pep8-indent",
     ft = "python",
-  },
-  {
-    "beauwilliams/focus.nvim",
-    config = function()
-      require("focus").setup({
-        relativenumber = true,
-      })
-    end,
   },
 }
