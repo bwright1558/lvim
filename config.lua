@@ -37,6 +37,7 @@ lvim.keys.visual_block_mode["K"] = ":move '<-2<cr>gv=gv"
 lvim.builtin.which_key.mappings[";"] = { "<cmd>Telescope filetypes<cr>", "Filetypes" }
 lvim.builtin.which_key.mappings["G"] = { ":G ", "Git Command", silent = false }
 lvim.builtin.which_key.mappings["g"]["g"] = { "<cmd>G<cr>", "Git Status" }
+lvim.builtin.which_key.mappings["g"]["z"] = { "<cmd>LazyGit<cr>", "Lazy Git" }
 lvim.builtin.which_key.mappings["g"]["d"] = { "<cmd>DiffviewOpen<cr>", "Git Diff" }
 lvim.builtin.which_key.mappings["g"]["h"] = { "<cmd>DiffviewFileHistory<cr>", "File History" }
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<cr>", "Projects" }
@@ -158,6 +159,10 @@ lvim.plugins = {
     "tpope/vim-fugitive",
     cmd = { "G", "Git" },
     ft = "fugitive",
+  },
+  {
+    "kdheepak/lazygit.nvim",
+    cmd = { "LazyGit" },
   },
   {
     "ray-x/lsp_signature.nvim",
