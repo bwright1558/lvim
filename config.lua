@@ -95,7 +95,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 lvim.builtin.treesitter.indent.enable = false
 
 -- LSP
-vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "yaml-language-server" })
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "yamlls", "yaml-language-server" })
 lvim.lsp.diagnostics.virtual_text = false
 lvim.lsp.on_attach_callback = function(client, bufnr)
   require("lsp_signature").on_attach()
