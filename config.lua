@@ -34,6 +34,7 @@ lvim.keys.visual_block_mode["J"] = ":move '>+1<cr>gv=gv"
 lvim.keys.visual_block_mode["K"] = ":move '<-2<cr>gv=gv"
 
 -- Which Key mappings
+lvim.builtin.which_key.mappings["q"] = { "<cmd>q<cr>", "Quit" }
 lvim.builtin.which_key.mappings[";"] = { "<cmd>Telescope filetypes<cr>", "Filetypes" }
 lvim.builtin.which_key.mappings["G"] = { ":G ", "Git Command", silent = false }
 lvim.builtin.which_key.mappings["g"]["g"] = { "<cmd>G<cr>", "Git Status" }
