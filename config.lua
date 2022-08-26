@@ -36,8 +36,8 @@ lvim.keys.visual_block_mode["K"] = ":move '<-2<cr>gv=gv"
 -- Which Key mappings
 lvim.builtin.which_key.mappings["q"] = { "<cmd>q<cr>", "Quit" }
 lvim.builtin.which_key.mappings[";"] = { "<cmd>Telescope filetypes<cr>", "Filetypes" }
-lvim.builtin.which_key.mappings["g"][";"] = { ":G ", "Git Command", silent = false }
-lvim.builtin.which_key.mappings["g"]["g"] = { "<cmd>G<cr>", "Git Status" }
+lvim.builtin.which_key.mappings["g"]["g"] = { ":G ", "Git Command", silent = false }
+lvim.builtin.which_key.mappings["g"][";"] = { "<cmd>G<cr>", "Git Status" }
 lvim.builtin.which_key.mappings["g"]["z"] = { "<cmd>LazyGit<cr>", "Lazy Git" }
 lvim.builtin.which_key.mappings["g"]["d"] = { "<cmd>DiffviewOpen<cr>", "Git Diff" }
 lvim.builtin.which_key.mappings["g"]["h"] = { "<cmd>DiffviewFileHistory<cr>", "File History" }
