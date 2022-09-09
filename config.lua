@@ -38,7 +38,6 @@ lvim.builtin.which_key.mappings["q"] = { "<cmd>q<cr>", "Quit" }
 lvim.builtin.which_key.mappings[";"] = { "<cmd>Telescope filetypes<cr>", "Filetypes" }
 lvim.builtin.which_key.mappings["g"]["g"] = { ":G ", "Git Command", silent = false }
 lvim.builtin.which_key.mappings["g"][";"] = { "<cmd>G<cr>", "Git Status" }
-lvim.builtin.which_key.mappings["g"]["z"] = { "<cmd>LazyGit<cr>", "Lazy Git" }
 lvim.builtin.which_key.mappings["g"]["d"] = { "<cmd>DiffviewOpen<cr>", "Git Diff" }
 lvim.builtin.which_key.mappings["g"]["h"] = { "<cmd>DiffviewFileHistory<cr>", "File History" }
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<cr>", "Projects" }
@@ -156,18 +155,15 @@ lvim.plugins = {
   { "EdenEast/nightfox.nvim" },
   { "sindrets/diffview.nvim" },
   { "ggandor/lightspeed.nvim" },
+  { "tpope/vim-surround" },
+  { "tpope/vim-repeat" },
   {
     "tpope/vim-fugitive",
     cmd = { "G", "Git" },
     ft = "fugitive",
   },
   {
-    "kdheepak/lazygit.nvim",
-    cmd = { "LazyGit" },
-  },
-  {
     "ray-x/lsp_signature.nvim",
-    event = "BufRead",
     config = function()
       require("lsp_signature").setup()
     end,
