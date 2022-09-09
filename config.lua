@@ -27,6 +27,8 @@ lvim.keys.normal_mode["<C-h>"] = "<cmd>FocusSplitLeft<cr>"
 lvim.keys.normal_mode["<C-j>"] = "<cmd>FocusSplitDown<cr>"
 lvim.keys.normal_mode["<C-k>"] = "<cmd>FocusSplitUp<cr>"
 lvim.keys.normal_mode["<C-l>"] = "<cmd>FocusSplitRight<cr>"
+lvim.keys.normal_mode["ga"] = "<Plug>(EasyAlign)"
+lvim.keys.visual_block_mode["ga"] = "<Plug>(EasyAlign)"
 lvim.keys.term_mode["<C-k>"] = [[<C-\><C-n>]] -- experimental
 
 -- Special mapping to adjust indentation when moving blocks of code up and down lines.
@@ -36,8 +38,8 @@ lvim.keys.visual_block_mode["K"] = ":move '<-2<cr>gv=gv"
 -- Which Key mappings
 lvim.builtin.which_key.mappings["q"] = { "<cmd>q<cr>", "Quit" }
 lvim.builtin.which_key.mappings[";"] = { "<cmd>Telescope filetypes<cr>", "Filetypes" }
-lvim.builtin.which_key.mappings["g"]["g"] = { ":G ", "Git Command", silent = false }
-lvim.builtin.which_key.mappings["g"][";"] = { "<cmd>G<cr>", "Git Status" }
+lvim.builtin.which_key.mappings["g"][";"] = { ":Git ", "Git Command", silent = false }
+lvim.builtin.which_key.mappings["g"]["g"] = { "<cmd>G<cr>", "Git Status" }
 lvim.builtin.which_key.mappings["g"]["d"] = { "<cmd>DiffviewOpen<cr>", "Git Diff" }
 lvim.builtin.which_key.mappings["g"]["h"] = { "<cmd>DiffviewFileHistory<cr>", "File History" }
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<cr>", "Projects" }
@@ -155,6 +157,7 @@ lvim.plugins = {
   { "EdenEast/nightfox.nvim" },
   { "sindrets/diffview.nvim" },
   { "ggandor/lightspeed.nvim" },
+  { "junegunn/vim-easy-align" },
   { "tpope/vim-surround" },
   { "tpope/vim-repeat" },
   {
