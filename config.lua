@@ -27,6 +27,8 @@ lvim.keys.normal_mode["<C-h>"] = "<cmd>FocusSplitLeft<cr>"
 lvim.keys.normal_mode["<C-j>"] = "<cmd>FocusSplitDown<cr>"
 lvim.keys.normal_mode["<C-k>"] = "<cmd>FocusSplitUp<cr>"
 lvim.keys.normal_mode["<C-l>"] = "<cmd>FocusSplitRight<cr>"
+lvim.keys.normal_mode["mm"] = "<cmd>WinShift<cr>"
+lvim.keys.normal_mode["mx"] = "<cmd>WinShift swap<cr>"
 lvim.keys.normal_mode["ga"] = "<Plug>(EasyAlign)"
 lvim.keys.visual_block_mode["ga"] = "<Plug>(EasyAlign)"
 lvim.keys.term_mode["<C-k>"] = [[<C-\><C-n>]] -- experimental
@@ -184,6 +186,7 @@ lvim.plugins = {
       vim.g.indent_blankline_buftype_exclude = { "terminal", "nofile", "nowrite" }
     end,
   },
+  { "sindrets/winshift.nvim" },
   {
     "beauwilliams/focus.nvim",
     config = function()
