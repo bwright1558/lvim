@@ -86,8 +86,9 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
 lvim.builtin.project.manual_mode = true
 
 -- Indentline
-lvim.builtin.indentlines.options.buftype_exclude = { "terminal", "nofile", "nowrite" }
+lvim.builtin.indentlines.options.char = "│"
 lvim.builtin.indentlines.options.show_current_context = false
+lvim.builtin.indentlines.options.buftype_exclude = { "terminal", "nofile", "nowrite" }
 
 -- Lualine
 lvim.builtin.lualine.style = "default"
