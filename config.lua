@@ -85,6 +85,10 @@ lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = true
 lvim.builtin.project.manual_mode = true
 
+-- Indentline
+lvim.builtin.indentlines.options.buftype_exclude = { "terminal", "nofile", "nowrite" }
+lvim.builtin.indentlines.options.show_current_context = false
+
 -- Lualine
 lvim.builtin.lualine.style = "default"
 lvim.builtin.lualine.options.component_separators = { left = "", right = "" }
@@ -176,15 +180,6 @@ lvim.plugins = {
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
-  },
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    event = "BufRead",
-    setup = function()
-      vim.g.indent_blankline_show_trailing_blankline_indent = false
-      vim.g.indent_blankline_filetype_exclude = { "help", "terminal", "alpha" }
-      vim.g.indent_blankline_buftype_exclude = { "terminal", "nofile", "nowrite" }
-    end,
   },
   { "sindrets/winshift.nvim" },
   {
