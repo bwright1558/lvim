@@ -8,6 +8,7 @@ vim.opt.showtabline = 0
 vim.opt.modeline = false
 vim.opt.relativenumber = true
 vim.opt.whichwrap:remove({ "<", ">", "[", "]", "h", "l" })
+vim.opt.timeoutlen = 500
 
 -- folding
 vim.opt.foldmethod = "expr"
@@ -73,6 +74,14 @@ lvim.builtin.telescope.defaults.mappings = {
     ["<C-k>"] = actions.move_selection_previous,
   },
 }
+
+-- Disable telescope theme set by default lunarvim config.
+for _, value in pairs(lvim.builtin.telescope.pickers) do
+  value.theme = nil
+end
+
+-- Override "smart" path display set by default lunarvim config.
+lvim.builtin.telescope.pickers.git_files.path_display = { shorten = 10 }
 
 -- User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
